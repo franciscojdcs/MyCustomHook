@@ -1,5 +1,5 @@
-import React, { useEffect, useReducer } from 'react'
-import { todoReducer } from '../08-useReducer/TodoReducer';
+import  { useEffect, useReducer } from 'react'
+import { todoReducer } from './TodoReducer';
 
 
 const initialValue = [
@@ -19,7 +19,7 @@ const useTodos = () => {
     const [todos, dispatch] = useReducer(todoReducer, initialValue, init);
 
     useEffect(() => {
-        // Salvar datos localmente
+        // save data local
       localStorage.setItem('todos', JSON.stringify(todos));
     
     }, [todos])
